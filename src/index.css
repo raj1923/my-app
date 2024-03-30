@@ -1,0 +1,36 @@
+.childdata
+{
+ background-color: aqua;
+ width:min-content;
+border: 2px solid black;
+padding-left: 50px;
+ 
+ 
+}
+.childdata img
+{
+width: 300px;
+height: 200px;
+padding-right: 50px;
+}
+.childdata h3,h1
+{
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .post-data
+  {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    border: 1px solid black;
+    gap:40px;
+
+  }
+}
+
+
