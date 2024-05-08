@@ -33,4 +33,18 @@ padding-right: 50px;
   }
 }
 
+.nav{
+  background-color: cadetblue;
+  text-align: justify;
+  text-decoration: none;
+  
+  
+
+}
+.active{
+  font-weight: bold;
+  font-size: larger;
+}
+
+
 

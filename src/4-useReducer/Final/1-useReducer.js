@@ -84,7 +84,7 @@ const Index =()=>
 
             userdata :[],
             iserror : {status: false, mgs: ""},
-            isEdit : {status: false, name: "", email: ""}
+            isEdit : {status: false, id : "", name: "", email: ""}
         }
 
         
@@ -112,7 +112,7 @@ const Index =()=>
         useEffect(()=>
         {
             datacollection ("https://jsonplaceholder.typicode.com/users")
-        }, [])
+        }, [ ])
 
         const datacollection = async(urldata)=>
             {
@@ -154,7 +154,7 @@ const Index =()=>
                             state.userdata.map((eachdata, index)=>
                             {
                                 return <tr style={{textAlign:"center"}}  key={index}>
-                                    <td>{eachdata.id}</td>
+                                    <td>{index}</td>
                                     <td>{eachdata.name}</td>
                                     <td>{eachdata.email}</td>
                                     <td>{eachdata.address.city}</td>
@@ -179,9 +179,6 @@ const Index =()=>
             const [namedata, setname] = useState(name || " ")
             const [emaildata, setemail] = useState(email || " ")
             const [adddata, setadd] = useState(address || "")
-
-
-
             return<div>
                 <input type="text" name="fname" id="fname" value={namedata} onChange={(e)=> setname(e.target.value)}></input>
                 <input type="text" name="gmail" id="gmail" value={emaildata} onChange={(e)=> setemail(e.target.value)}></input>
